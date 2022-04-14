@@ -27,20 +27,23 @@ public class MainActivity extends Activity {
     }
 
     public void TestButton() {
-        final String[] LotsOfStrings = {"Yes", "Well Done!", "Nope", "I'm supposed to be proud?",
-                                        "Good Heavens", "Finally, Jesus Christ Man", "You done good kid"};
+        final String[] SurfReport= {"Kommetjie has no waves today", "Go surf pebbles its 4-6ft",
+                                    "Too big today, got 12-14ft heading through.", "Best waves near " +
+                                    "you are in Llandudno. (2-4ft Offshore Winds)", "Go to Dunes now!",
+                                    "Swell Direction looking good for Ledge right now", "Flat all round buddy."};
         final TextView changingText = (TextView) findViewById(R.id.txtChangeable);
         Button changeTextButton = (Button) findViewById(R.id.btnOne) ;
 
         changeTextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int random = (int) (Math.random() * LotsOfStrings.length);
+                int random = (int) (Math.random() * SurfReport.length);
                 if (random == oldValue) {
-                    random = (int) (Math.random() * LotsOfStrings.length);
+                    random = (int) (Math.random() * SurfReport.length);
                 }
-                changingText.setText(LotsOfStrings[random]);
+                changingText.setText(SurfReport[random]);
                 oldValue = random;
+                changeTextButton.setVisibility(view.INVISIBLE);
             }
         });
     }

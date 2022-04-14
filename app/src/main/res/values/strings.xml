@@ -5,6 +5,5 @@
     values-round/strings.xml for round devices.
     -->
     <string name="hello_world">Hello Square World!</string>
-    <string name="button_text">Click Me!</string>
-    <string name="text_change">You\'ve just clicked a button</string>
+    <string name="button_text">Surf Report</string>
 </resources>
